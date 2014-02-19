@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 GTDResources::Application.load_tasks
+
+# rake minitest will include tests in test/features
+MiniTest::Rails::Testing.default_tasks << "features"
