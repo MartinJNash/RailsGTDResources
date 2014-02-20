@@ -5,30 +5,16 @@
 
     <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Title:</strong>
-      <%= @project.title %>
-    </p>
-
-    <p>
-      <strong>Blurb:</strong>
-      <%= @project.blurb %>
-    </p>
-
-    <p>
-      <strong>Priority:</strong>
-      <%= @project.priority %>
-    </p>
-
-    <table>
-      <% @tasks.each.with_index do |task, index| %>
-        <p><b><%= index + 1 %>. </b><%= task.title %></p>
-      <% end %>  
-    </table>
-
-
-    <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
+    <h2><%= @project.title %></h2>
+    <p><%= @project.blurb %></p>
 
   </div>
 </div>
+
+<div class="row">
+  <div class="columns small-12">
+    <h4><%= pluralize @project.tasks.count, "task" %></h4> 
+  </div>
+</div>
+    
+

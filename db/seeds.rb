@@ -12,5 +12,19 @@ learn_rails = Project.create(
   blurb: "Learn this stuff so I can make a bunch of money"
   )
 
-learn_rails.tasks << Task.create(title: "Take class");
-learn_rails.tasks << Task.create(title: "Read POODR Book again")
+10.times do 
+  learn_rails.tasks << Task.create(title: "Meet with #{Faker::Name.name}")
+  learn_rails.tasks << Task.create(title: "Call #{Faker::Name.name}")
+end
+
+
+earn_gold_medal = Project.create(
+  title: "Earn Olympic gold",
+  blurb: "Stand on the podium and let everyone know how great my country is!"
+  )
+
+earn_gold_medal.tasks << Task.create(title: "Practice Hard")
+earn_gold_medal.tasks << Task.create(title: "Practice Harder")
+earn_gold_medal.tasks << Task.create(title: "Practice Harder than everyone else")
+earn_gold_medal.tasks << Task.create(title: "Meditate")
+

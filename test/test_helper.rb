@@ -13,5 +13,5 @@ end
 class ActionDispatch::IntegrationTest
   include Rails.application.routes.url_helpers
   include Capybara::DSL
-  include Devise::TestHelpers
+  # include Devise::TestHelpers
 end
